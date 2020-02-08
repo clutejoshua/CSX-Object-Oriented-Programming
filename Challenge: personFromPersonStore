@@ -1,0 +1,23 @@
+const personStore = {
+  greet: function() {
+    console.log('hello');
+  }
+}
+
+function personFromPersonStore(name, age) {
+	// declare a person object variable and assign it to the output of Object.create, passing in personStore as the proto
+  let person = Object.create(personStore);
+  // add name property to person
+  person.name = name;
+  // add age property to person
+  person.age = age;
+  // return person object
+  return person;
+}
+
+const sandra = personFromPersonStore('Sandra', 26);
+
+// Uncomment these lines to check your work!
+console.log(sandra.name); // -> Logs 'Sandra'
+console.log(sandra.age); // -> Logs 26
+sandra.greet(); // -> Logs 'hello'
