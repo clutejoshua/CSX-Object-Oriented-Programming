@@ -1,0 +1,14 @@
+const makePerson = (name, age) => {
+	let obj = {
+    name: name,
+    age: age
+  }
+  
+  return obj;
+}
+
+const vicky = makePerson('Vicky', 24);
+
+// Uncomment these lines to check your work!
+console.log(vicky.name); // -> Logs 'Vicky'
+console.log(vicky.age); // -> Logs 24
